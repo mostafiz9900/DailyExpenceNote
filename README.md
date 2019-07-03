@@ -1,2 +1,2 @@
-# DalyExpenceNote
+# DailyExpenceNote
 Android, SqLite
