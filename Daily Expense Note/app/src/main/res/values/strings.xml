@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Daily Expense Note</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_expences">Expenses</string>
+</resources>
