@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UpdatExpense">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Expense Type"
+            android:textColor="#000"
+            />
+
+        <Spinner
+            android:id="@+id/typeSpinnerID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            />
+
+    </LinearLayout>
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/expenseAmountET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Expense Amount"
+        android:textSize="16sp"
+        android:inputType="number"
+        />
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/expenseDateET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Expense Date"/>
+        <ImageView
+            android:id="@+id/datePickerBtn"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_calender"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="10dp"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/expenseTimeET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Expense Time"/>
+
+        <ImageView
+            android:id="@+id/timePickerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_access_time_black_24dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_document"
+            />
+        <Button
+            android:layout_marginLeft="5dp"
+            android:id="@+id/updateDocumentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Aocuments(if any)"
+            android:textAllCaps="false"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/updateExpenseBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#6200EA"
+        android:text="Update expense"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+</LinearLayout>

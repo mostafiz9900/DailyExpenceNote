@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expense Type"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/typeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#C51162"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/amountTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#C51162"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expense Date"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/dateTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#C51162"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expense Time"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/timeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#C51162"/>
+
+
+</LinearLayout>
