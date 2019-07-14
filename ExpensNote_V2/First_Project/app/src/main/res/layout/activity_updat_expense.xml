@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#37474F"
+    tools:context=".UpdatExpenseActivity">
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="3dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@drawable/spinner_back"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Expense Type"
+                android:textColor="#000"
+                />
+
+            <Spinner
+                android:id="@+id/updateActivityTypeSpinnerID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                />
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/updateExpenseAmountET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Expense Amount"
+        android:textSize="16sp"
+        android:inputType="number"
+        android:background="@drawable/edit_text_background"
+        android:padding="5dp"
+        />
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/updateExpenseDateET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Expense Date"
+            android:background="@drawable/edit_text_background"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/updateActivityDatePickerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="3dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_date" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/updateExpenseTimeET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Expense Time"
+            android:background="@drawable/edit_text_background"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/updateActiviTimePickerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="3dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_access_time_black_24dp" />
+
+    </FrameLayout>
+
+
+
+    <ImageView
+        android:id="@+id/updateFileIV"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/ic_document"
+        />
+
+    <TextView
+        android:id="@+id/chooseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Uploaded Documents Photo"
+        android:textStyle="bold"
+        android:textColor="#00BFA5"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:id="@+id/updateCameraGalleryBtnfield"
+        android:visibility="gone"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:clickable="true"
+                android:onClick="updateOpenCamera"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/ic_camera"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:textStyle="bold"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/galleryButtonID"
+                android:clickable="true"
+                android:onClick="updateOpenGallery"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/ic_gallery"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery"
+                android:textStyle="bold"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/cencleButtonID"
+                android:clickable="true"
+                android:onClick="UpdateCenclePickDocument"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_cancel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancle"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:onClick="updateDocumentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Aocuments(if any)"
+            android:textAllCaps="false"
+            android:background="@drawable/document_button_background"
+            android:textColor="#fff"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/updateExpenseBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_backgrond"
+        android:text="Update expense"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="16sp"/>
+
+</LinearLayout>
